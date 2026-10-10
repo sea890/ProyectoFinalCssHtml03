@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cómo usé la inteligencia artificial | MiniAcad</title>
+  <meta name="description" content="Registro de los prompts usados en MiniAcad, qué respondió la inteligencia artificial y qué cambió el estudiante.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Fredoka:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body class="pagina-ia">
+
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="encabezado__fila contenedor">
+      <a class="logo" href="index.html">MiniAcad<span class="solo-lectores">, ir al inicio</span></a>
+
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>Menú</button>
+
+      <nav id="menu-principal" aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="cursos/sumar.html">Sumar</a></li>
+          <li><a href="cursos/dividir.html">Dividir</a></li>
+          <li><a href="cursos/zapatos.html">Zapatos</a></li>
+          <li><a href="cursos/internet-seguro.html">Internet seguro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor" tabindex="-1">
+
+    <nav class="migas" aria-label="Ruta de navegación">
+      <ol>
+        <li><a href="index.html">Inicio</a></li>
+        <li><span aria-current="page">Cómo usé la inteligencia artificial</span></li>
+      </ol>
+    </nav>
+
+    <section class="curso-cabecera" aria-labelledby="titulo-ia">
+      <h1 id="titulo-ia">Cómo usé la inteligencia artificial</h1>
+      <p>Esta página registra cómo se usó la inteligencia artificial en MiniAcad: qué se le pidió, qué respondió y qué cambió la persona que hizo el proyecto.</p>
+    </section>
+
+    <section aria-labelledby="titulo-prompts">
+      <h2 id="titulo-prompts">Registro de prompts</h2>
+
+      <div class="tabla-contenedor" role="region" aria-labelledby="caption-prompts" tabindex="0">
+        <table class="tabla-ia tabla-prompts">
+          <caption id="caption-prompts">Prompts usados en el proyecto</caption>
+          <thead>
+            <tr>
+              <th scope="col">N.º</th>
+              <th scope="col">Prompt exacto</th>
+              <th scope="col">Herramienta usada</th>
+              <th scope="col">Qué obtuve</th>
+              <th scope="col">Qué modifiqué yo</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">Prompt 1</th>
+            <td>Pegué el enunciado completo del proyecto MiniAcad y escribí: "Me podrías crear un prom para mandarte ese prom a otro chat porfa, gracias"</td>
+            <td>Claude (Anthropic)</td>
+            <td>Un prompt ordenado por bloques (rol, contexto, objetivo, público, parámetros técnicos, restricciones, formato de salida, criterio de calidad, petición de explicación e iteración).</td>
+            <td><span class="guia">Separe los bloques y fases y añadi el apartado de IA e interaccion con JS</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Prompt 2</th>
+            <td>
+              <details class="prompt-detalle">
+                <summary>Ver el prompt completo</summary>
+<pre>ROL
+Actúa como desarrollador web front-end senior, con experiencia en accesibilidad web (WCAG 2.1 AA), diseño de interfaces para niños y uso de lectores de pantalla (NVDA, JAWS, VoiceOver, TalkBack).
+
+CONTEXTO
+Soy estudiante y estoy haciendo el proyecto final de un curso llamado "CSS Essentials". Debo construir "MiniAcad", un sitio web estático de cursos en línea inspirado en netacad.com, usando solo HTML, CSS y JavaScript. El proyecto se evalúa por su estructura, su CSS, su accesibilidad y mi capacidad de explicar cada línea, así que el código debe ser claro y didáctico.
+
+OBJETIVO
+Necesito que me generes el proyecto completo de MiniAcad: una página de inicio con el catálogo de cursos, una página por curso dividida en lecciones, y un encabezado y pie de página comunes a todo el sitio.
+
+PÚBLICO
+Los usuarios son niños menores de 10 años (uno de siete años debe poder usarlo solo) y también personas ciegas que usan lector de pantalla y teclado. Usa lenguaje sencillo, oraciones cortas y colores amables. Si un menú necesita explicación, está mal diseñado.
+
+ESTRUCTURA DE ARCHIVOS (respétala exactamente)
+miniacad/
+├── index.html
+├── IA.html
+├── cursos/ (sumar.html, dividir.html, zapatos.html, internet-seguro.html)
+├── css/ (estilos.css, responsivo.css)
+├── js/script.js
+├── img/ (ilustraciones de los cursos)
+└── evidencias/ (vacía; yo pondré las capturas)
+
+CURSOS Y LECCIONES
+1. Aprendo a sumar: Qué es sumar · Sumas hasta 10 · Sumas con dibujos
+2. Aprendo a dividir: Repartir en partes iguales · La división con objetos · Práctica
+3. Aprendo a amarrarme los zapatos: Partes del cordón · El nudo base · Las dos orejas de conejo
+4. Me cuido en internet: Mis datos son míos · No hablo con desconocidos · Le cuento a un adulto
+5. Quinto curso libre (opcional): "Cuido mis dientes" (3 lecciones). Inclúyelo al final, una vez terminados los cuatro obligatorios.
+
+Cada lección debe tener:
+- Un video incrustado con &lt;iframe&gt; de YouTube (con title descriptivo, subtítulos activados con cc_load_policy=1 y hl=es). Como no puedes verificar videos reales, usa un marcador claro tipo "REEMPLAZAR_ID_VIDEO" y dime qué buscar en YouTube para cada lección (en español y con subtítulos). Si tienes búsqueda web, propón videos reales.
+- Una descripción textual del video dentro de la misma lección (en un acordeón accesible), por si el video transmite información visual.
+- Al menos una imagen ilustrativa con alt descriptivo y útil. Créalas como archivos SVG simples en img/ para que funcionen sin internet. Las imágenes decorativas llevan alt="".
+- Una lectura de máximo 120 palabras, frases simples y letra grande.
+- Un botón para avanzar a la siguiente lección (enlace &lt;a&gt; con estilo de botón que lleve a la siguiente sección; en la última lección debe llevar al siguiente curso o al inicio).
+- El curso de zapatos debe incluir la explicación paso a paso en texto (lista ordenada &lt;ol&gt;), no solo en imágenes.
+- Cada curso debe incluir un mini quiz sin puntaje guardado.
+
+PARÁMETROS TÉCNICOS DE CSS (los doce puntos son obligatorios y deben verse en MI hoja de estilos)
+1. Hoja externa enlazada con &lt;link&gt; (css/estilos.css y css/responsivo.css en todas las páginas). Sin CSS en línea.
+2. Variables CSS en :root para la paleta y las tipografías.
+3. Selectores variados: de tipo, clase, id, descendiente, hijo directo (&gt;), agrupados y de atributo (por ejemplo a[target], input[type="radio"] o a[href^="http"]).
+4. Modelo de caja: margin, padding, border y box-sizing: border-box.
+5. Flexbox en el encabezado y en la barra de navegación.
+6. CSS Grid en el catálogo de cursos de la página de inicio (repeat(auto-fit, minmax(...))).
+7. Diseño responsivo con mínimo dos @media (768px y 480px), colocados en responsivo.css.
+8. Pseudoclases: :hover, :focus, :active y :nth-child().
+9. Transiciones en botones y tarjetas de curso.
+10. Dos fuentes: una para títulos y otra para texto, con jerarquía clara y fuentes de respaldo.
+11. Contraste accesible entre texto y fondo.
+12. Código comentado y ordenado por secciones numeradas.
+Tipografía del cuerpo de mínimo 18px (usa rem, por ejemplo 1.125rem). Todas las medidas de texto en rem/em para que escale al 200 % sin romperse.
+
+PARÁMETROS DE ACCESIBILIDAD (obligatorios; una persona ciega debe poder identificar en qué curso está, avanzar entre lecciones y comprender el contenido)
+- &lt;html lang="es"&gt; en todas las páginas.
+- Un solo &lt;h1&gt; por página y jerarquía de encabezados sin saltos.
+- Etiquetas semánticas: header, nav, main, section, article, footer. Si hay varias regiones del mismo tipo (por ejemplo dos &lt;nav&gt;), cada una con aria-label.
+- Enlace "Saltar al contenido" al inicio de cada página, visible al recibir el foco.
+- Todo elemento interactivo alcanzable con Tab en orden lógico, sin tabindex positivo.
+- :focus-visible con contorno claro y grueso. Nunca outline: none sin reemplazo.
+- Acciones con &lt;button&gt;, nunca &lt;div onclick&gt;.
+- Todo campo con &lt;label for&gt; asociado a un id.
+- Mini quiz con &lt;fieldset&gt; y &lt;legend&gt;, y resultado anunciado con aria-live="polite".
+- Acordeones y menú móvil con aria-expanded y aria-controls (actualizados por JS).
+- Contraste mínimo 4.5:1 en texto normal y 3:1 en texto grande. La información nunca depende solo del color: agrega texto o iconos con etiqueta (por ejemplo, "Correcto ✔" / "Intenta otra vez ✘" en el quiz).
+- @media (prefers-reduced-motion: reduce) que desactive transiciones y animaciones.
+- Indicar el curso y la lección actual de forma textual (migas de pan con aria-current="page" y un encabezado claro por lección).
+
+RESTRICCIONES
+- Sin registro ni inicio de sesión.
+- Sin guardar avance: nada de base de datos ni localStorage.
+- Sin frameworks CSS (Bootstrap, Tailwind, Bulma) ni librerías externas. Solo puedes usar Google Fonts, con fuentes de respaldo.
+- Debe funcionar abriendo index.html directamente (doble clic): usa solo rutas relativas, sin fetch, sin módulos ES y sin servidor.
+- JavaScript solo para interacción sencilla: menú móvil, acordeones, mostrar/ocultar contenido y mini quiz. Sin JS, el contenido principal debe seguir siendo legible.
+- Evita lenguaje técnico o infantilizante en exceso, y no uses texto de relleno tipo "lorem ipsum": escribe contenido real y correcto en español.
+
+PÁGINA IA.html
+Crea IA.html con la misma hoja de estilos, enlazada desde el pie de página de todo el sitio, con una &lt;table&gt; (con &lt;caption&gt; y encabezados &lt;th scope&gt;) de cinco filas vacías y estas columnas: Prompt exacto, Herramienta usada, Qué obtuve, Qué modifiqué yo. NO inventes prompts por mí: deja las filas con texto guía como "Escribe aquí...", porque yo debo documentar mis prompts reales y ser honesto sobre qué generó la IA y qué cambié.
+
+FORMATO DE SALIDA
+- Trabaja por fases y espera mi "continúa" entre fases:
+  Fase 1: árbol de archivos, paleta de colores con tabla de contraste calculada (texto/fondo con su relación y si pasa AA) y elección de tipografías.
+  Fase 2: index.html + css/estilos.css (con el Grid del catálogo, Flexbox del encabezado y nav, variables, selectores, pseudoclases y transiciones).
+  Fase 3: las cuatro páginas de cursos, más el quinto si da el espacio.
+  Fase 4: css/responsivo.css y js/script.js.
+  Fase 5: IA.html y las ilustraciones SVG.
+  Fase 6: lista de verificación para mis cuatro pruebas obligatorias (solo teclado, lector de pantalla con NVDA o VoiceOver, Lighthouse/WAVE con mínimo 90, WebAIM Contrast Checker) y guía para publicar en GitHub Pages.
+- Entrega cada archivo en su propio bloque de código con su ruta como título, comentado por secciones.
+- Si puedes generar archivos descargables o un .zip, hazlo al final.
+
+CRITERIO DE CALIDAD
+- HTML que valide sin errores en validator.w3.org y CSS que valide en jigsaw.w3.org.
+- Contraste WCAG AA verificado con números.
+- Lighthouse de accesibilidad objetivo: 90 o más.
+- Probado mentalmente con lector de pantalla: el orden de lectura debe tener sentido.
+- No inventes resultados de pruebas: las capturas y notas de NVDA/Lighthouse las haré yo.
+
+PETICIÓN DE EXPLICACIÓN
+Debo sustentar oralmente cualquier línea de mi CSS. Al final de cada fase, explícame en lenguaje simple: (a) qué hace cada bloque importante de CSS, (b) por qué elegiste Grid o Flexbox en cada lugar, (c) qué hace auto-fit/minmax, :focus-visible y prefers-reduced-motion, y (d) tres decisiones de diseño que yo pueda defender en mi sustentación.
+
+ITERACIÓN
+Empieza solo con la Fase 1. Después de cada fase, pregúntame si quiero ajustar algo (colores, tono, tamaño de letra, estructura) antes de continuar.</pre>
+              </details>
+            </td>
+            <td>Claude (Anthropic)</td>
+            <td><span class="guia">la IA me dio un prom por fases consistia en 6 fases las cuales enviaba fase por fase , aunque algunas estaban incompletas.</span></td>
+            <td><span class="guia">A las fases le añadi el apartado de IA, JS y los videos.</span></td>
+          </tr>
+          <tr>
+            <th scope="row">Prompt 3</th>
+            <td>Buscame videos. para poner en los 4 curos relacionados con cada parte de los cursos. </td>
+            <td>Claude (Anthropic)</td>
+            <td>Me explicó qué canales confiables buscar, qué escribir en YouTube para cada lección y cómo sacar el ID del video para el iframe.</td>
+            <td><span class="guia">puse los link con su respectivo ID</span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section aria-labelledby="titulo-codigo">
+      <h2 id="titulo-codigo">Qué partes del código generó la IA</h2>
+
+      <div class="tabla-contenedor" role="region" aria-labelledby="caption-codigo" tabindex="0">
+        <table class="tabla-ia">
+          <caption id="caption-codigo">Archivos del proyecto</caption>
+          <thead>
+            <tr>
+              <th scope="col">Archivo</th>
+              <th scope="col">Primera versión</th>
+              <th scope="col">Qué modifiqué yo</th>
+            </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row"><code>index.html</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Coloque la etiqueta "href" para poder vinculas los archivos con los cursos y la hoja de estilo</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>cursos/sumar.html</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Puse los videos que funcionaran y que no estubieran bloqueados.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>cursos/dividir.html</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Puse los videos que funcionaran y que no estubieran bloqueados.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>cursos/zapatos.html</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Puse los videos que funcionaran y que no estubieran bloqueados.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>cursos/internet-seguro.html</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Puse los videos que funcionaran y que no estubieran bloqueados.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>css/estilos.css</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Corregui espacios inecesarios y correguir sintasix incorrecta.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>css/responsivo.css</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">correguir sintasix incorrecta.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>js/script.js</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Modificar cierta parte del codigo para que funcione la validacion del quiz.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>img/ (ilustraciones .svg)</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">Se modificaron algunas imagenes ya que algunas estaban bloqueadas o no tenia vista previa.</span></td>
+          </tr>
+          <tr>
+            <th scope="row"><code>IA.html</code></th>
+            <td>Primera versión generada con IA (Claude)</td>
+            <td><span class="guia">se verifico la sintaxis y correguir lo que estuviera mal ejemplo la etiqueta "href". </span></td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__contenido contenedor">
+      <p class="pie__marca">MiniAcad</p>
+
+      <nav aria-label="Cursos">
+        <ul class="pie__lista">
+          <li><a href="cursos/sumar.html">Aprendo a sumar</a></li>
+          <li><a href="cursos/dividir.html">Aprendo a dividir</a></li>
+          <li><a href="cursos/zapatos.html">Aprendo a amarrarme los zapatos</a></li>
+          <li><a href="cursos/internet-seguro.html">Me cuido en internet</a></li>
+        </ul>
+      </nav>
+
+      <p><a href="IA.html" aria-current="page">Cómo usé la inteligencia artificial</a></p>
+      <p class="pie__nota">Proyecto escolar de CSS Essentials. Hecho con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MiniAcad: cursos cortos para niños</title>
+  <meta name="description" content="MiniAcad tiene cursos cortos para niños: sumar, dividir, amarrarse los zapatos y cuidarse en internet.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&amp;family=Fredoka:wght@500;600;700&amp;display=swap">
+
+  <link rel="stylesheet" href="css/estilos.css">
+  <link rel="stylesheet" href="css/responsivo.css">
+</head>
+<body>
+
+  <a class="salto" href="#contenido">Saltar al contenido</a>
+
+  <header class="encabezado">
+    <div class="encabezado__fila contenedor">
+      <a class="logo" href="index.html">MiniAcad<span class="solo-lectores">, ir al inicio</span></a>
+
+      <button class="boton-menu" type="button" aria-expanded="false" aria-controls="menu-principal" hidden>Menú</button>
+
+      <nav id="menu-principal" aria-label="Menú principal">
+        <ul class="menu">
+          <li><a href="index.html" aria-current="page">Inicio</a></li>
+          <li><a href="cursos/sumar.html">Sumar</a></li>
+          <li><a href="cursos/dividir.html">Dividir</a></li>
+          <li><a href="cursos/zapatos.html">Zapatos</a></li>
+          <li><a href="cursos/internet-seguro.html">Internet seguro</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido" class="contenedor" tabindex="-1">
+
+    <section class="bienvenida" aria-labelledby="titulo-bienvenida">
+      <h1 id="titulo-bienvenida">MiniAcad: aprende paso a paso</h1>
+      <p>Cursos cortos para niños. Aprende a sumar, a dividir, a amarrarte los zapatos y a cuidarte en internet.</p>
+      <a class="boton" href="#catalogo">Ver los cursos</a>
+    </section>
+
+    <section id="catalogo" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Elige tu curso</h2>
+
+      <div class="catalogo">
+
+        <article class="tarjeta-curso">
+          <img src="img/sumar-portada.svg" alt="" width="320" height="200">
+          <div class="tarjeta-curso__cuerpo">
+            <h3>Aprendo a sumar</h3>
+            <p>Junta cosas y descubre cuántas hay en total.</p>
+            <p class="etiqueta">3 lecciones</p>
+            <a class="boton" href="cursos/sumar.html">Empezar<span class="solo-lectores"> el curso Aprendo a sumar</span></a>
+          </div>
+        </article>
+
+        <article class="tarjeta-curso">
+          <img src="img/dividir-portada.svg" alt="" width="320" height="200">
+          <div class="tarjeta-curso__cuerpo">
+            <h3>Aprendo a dividir</h3>
+            <p>Reparte galletas en partes iguales.</p>
+            <p class="etiqueta">3 lecciones</p>
+            <a class="boton" href="cursos/dividir.html">Empezar<span class="solo-lectores"> el curso Aprendo a dividir</span></a>
+          </div>
+        </article>
+
+        <article class="tarjeta-curso">
+          <img src="img/zapatos-portada.svg" alt="" width="320" height="200">
+          <div class="tarjeta-curso__cuerpo">
+            <h3>Aprendo a amarrarme los zapatos</h3>
+            <p>Haz el nudo y las orejas de conejo paso a paso.</p>
+            <p class="etiqueta">3 lecciones</p>
+            <a class="boton" href="cursos/zapatos.html">Empezar<span class="solo-lectores"> el curso Aprendo a amarrarme los zapatos</span></a>
+          </div>
+        </article>
+
+        <article class="tarjeta-curso">
+          <img src="img/internet-portada.svg" alt="" width="320" height="200">
+          <div class="tarjeta-curso__cuerpo">
+            <h3>Me cuido en internet</h3>
+            <p>Cuida tus datos y pide ayuda a un adulto.</p>
+            <p class="etiqueta">3 lecciones</p>
+            <a class="boton" href="cursos/internet-seguro.html">Empezar<span class="solo-lectores"> el curso Me cuido en internet</span></a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="como-funciona" aria-labelledby="titulo-como">
+      <h2 id="titulo-como">Así se usa MiniAcad</h2>
+      <ol class="pasos">
+        <li><strong>Elige un curso.</strong> Toca el botón "Empezar".</li>
+        <li><strong>Mira el video y lee.</strong> Cada lección es corta.</li>
+        <li><strong>Responde las preguntas.</strong> Al final te contamos cómo te fue.</li>
+      </ol>
+    </section>
+
+  </main>
+
+  <footer class="pie">
+    <div class="pie__contenido contenedor">
+      <p class="pie__marca">MiniAcad</p>
+
+      <nav aria-label="Cursos">
+        <ul class="pie__lista">
+          <li><a href="cursos/sumar.html">Aprendo a sumar</a></li>
+          <li><a href="cursos/dividir.html">Aprendo a dividir</a></li>
+          <li><a href="cursos/zapatos.html">Aprendo a amarrarme los zapatos</a></li>
+          <li><a href="cursos/internet-seguro.html">Me cuido en internet</a></li>
+        </ul>
+      </nav>
+
+      <p><a href="IA.html">Cómo usé la inteligencia artificial</a></p>
+      <p class="pie__nota">Proyecto escolar de CSS Essentials. Hecho con HTML, CSS y JavaScript.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js" defer></script>
+</body>
+</html>
